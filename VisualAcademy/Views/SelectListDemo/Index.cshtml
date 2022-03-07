@@ -29,6 +29,8 @@
                     items += "<option value='" + location.id + "'>" + location.name + "</option>";
                 });
                 $("#LocationId").html(items);
+
+                $("#LocationId").change(); // change event firing 
             }); 
         });
         // Location에 따른 Sublocation 출력
