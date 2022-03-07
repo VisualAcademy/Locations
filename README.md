@@ -1,4 +1,4 @@
-# Properties
+# Locations
 
-ASP.NET Core 6.0 Razor Pages Scaffolding 연습
+ASP.NET Core 6.0 Web API Scaffolding 연습
 
