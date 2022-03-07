@@ -29,6 +29,13 @@ namespace VisualAcademy.Apis
             return await _context.Locations.ToListAsync();
         }
 
+        [HttpGet("Properties/{parentId}")]
+        public async Task<ActionResult<IEnumerable<Location>>> GetLocationsByProperty(int parentId)
+        {
+            // 특정 Property에 해당하는 Locations 정보만 읽어오기 
+            return await _context.Locations.Where(l => l.PropertyId == parentId).ToListAsync();
+        }
+
         // GET: api/Locations/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Location>> GetLocation(int id)
